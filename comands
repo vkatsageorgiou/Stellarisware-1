@@ -1,0 +1,12 @@
+openocd -f /usr/share/openocd/scripts/board/ek-lm3s3748.cfg
+
+openocd -f /usr/share/openocd/scripts/board/ek-lm3s3748.cfg -c 'program gcc/blinky.axf' -c 'reset run' -c 'shutdown'
+
+dmesg
+
+
+http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD
+
+ddd --debugger arm-none-eabi-gdb
+
+target remote localhost:3333

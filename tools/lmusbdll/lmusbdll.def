@@ -1,0 +1,12 @@
+; lmusbdll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "lmusbdll"
+; DESCRIPTION "A simple library allowing low level access to a WinUSB device"
+VERSION      1.0
+
+EXPORTS
+    ; Explicit exports can go here
+    InitializeDevice @1
+    TerminateDevice  @2
+    WriteUSBPacket   @3
+    ReadUSBPacket    @4

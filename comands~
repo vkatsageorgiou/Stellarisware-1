@@ -1,0 +1,16 @@
+Abrir openocd en modo servidor
+openocd -f /usr/share/openocd/scripts/board/ek-lm3s3748.cfg
+
+compilar
+openocd -f /usr/share/openocd/scripts/board/ek-lm3s3748.cfg -c 'program gcc/blinky.axf' -c 'reset run' -c 'shutdown'
+
+revisar mensajes del sistema
+dmesg
+
+
+http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD
+
+ddd --debugger arm-none-eabi-gdb
+una vez abierto el ddd y openocd en modo servidor
+
+target remote localhost:3333
